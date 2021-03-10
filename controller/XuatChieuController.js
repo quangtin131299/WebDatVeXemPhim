@@ -1,4 +1,3 @@
-
 const xuatchieuModel = require('../db/XuatChieuModel');
 
 class XuatChieuController{

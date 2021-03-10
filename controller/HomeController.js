@@ -5,6 +5,7 @@ class HomeController{
         let listPhimDC = [];
         phimModel.loadPhimDangChieu().then((result) => {
             listPhimDC = result;  
+            console.log(result);
             res.render("Home/index", {listPhimDC: listPhimDC})
         }).catch((err) => {
             console.log(err);

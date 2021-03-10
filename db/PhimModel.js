@@ -13,8 +13,9 @@ class PhimModel {
       });
     });
   }
+  
   loadChiTietPhim(idphim){
-
+    
   }
   
 }
