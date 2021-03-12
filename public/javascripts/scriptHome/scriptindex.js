@@ -32,25 +32,21 @@ $(document).ready(function () {
       });
     }
 
-    let trvet = "";
-    let bat = true;
-    $(document).click(function (event) {
-      if ($(event.target).closest(".modal").length) {
-        if (!trvet) {
-          trvet = $("#video").attr("src");
-          $("#video").attr("src", "");
-        }
-      } else {
-        if (trvet !== "") {
-          $("#video").attr("src", trvet);
-        }
-      }
-    });
+    // $(document).click(function (event) {
+    //   if ($(event.target).closest(".modal").length) {
+    //     $("#video").attr("src", "");
+    //   }
+    // });
 
-    $("#abc").click(function () {
-      console.log("ABC");
-    });
+    $('.imgtrailer').each(function(index, el){
+        $('#'+el.id).on('click',function(){
+           $("#video").attr("src", "https://www.youtube.com/embed/" + this.id);
+        })
+    })
+
+
+    
+    
+
   }
-
-
 });

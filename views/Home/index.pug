@@ -42,15 +42,14 @@ include ../Utils/header.pug
                             img(src=phim.Hinh width='270' height='400')
                             .row.abc(style='position: relative; top: -399px;')
                               .col-sm-12
-                                a#a(href='#' data-toggle='modal' data-target='#exampleModal')
-                                  img(id="abc", src='https://www.cgv.vn/skin/frontend/cgv/default/images/bg-transparent-grey.png')
+                                a#a(data-toggle='modal' data-target='#exampleModal')
+                                  img(class="imgtrailer",id=phim.Trailer, src='https://www.cgv.vn/skin/frontend/cgv/default/images/bg-transparent-grey.png')
                             .row.abc(style=' height: 100px; background: url(images/bg-black-transparent.png);z-index: 999; position: relative; top: -500px;; left: 15px; width: 270px;')
                               .col-sm-12
                                 .row
-                                  .col-sm-12(style='display: flex; align-items: center;')
-                                    h4(style='color: #FFFFFF; font-size: 16px; position: relative; top: 5x; left: -10px; text-transform: uppercase')
-                                      | C&ocirc;
-                                      | g&aacute;i &dstrok;&#x1EBF;n t&#x1EEB; h&ocirc;m qua
+                                  .col-sm-12(style='height: 50px ;display: flex; align-items: center;')
+                                    h4(style='position: relative; top: 15px; color: #FFFFFF; font-size: 14px; text-transform: uppercase')
+                                      = phim.TenPhim
                                 .row(style='position: relative; top: 8px;')
                                   .col-sm-6(style='display: flex; align-items: center; justify-content: center;  padding: 0px 0px 0px 0px; margin-bottom: 5px;')
                                     button.btn.btn-secondary(style='text-transform: uppercase;' type='button')
@@ -63,6 +62,7 @@ include ../Utils/header.pug
                                           img(src='images/bg-cate-booking.png' alt='photo' width='9' height='23')
                                         .col-sm(style='text-transform: uppercase; font-size: 15px;')
                                           | &dstrok;&#x1EB7;t v&eacute;
+
           #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
             .modal-dialog.modal-lg
               .modal-content
@@ -87,5 +87,5 @@ include ../Utils/header.pug
 include ../Utils/footer.pug
 script(src='javascripts/plugins.js')
 script(src='javascripts/app.js')
-script(src='javascripts/scriptHome/scriptindex.js')
-  
+script(src="javascripts/scriptHome/scriptindex.js") 
+
