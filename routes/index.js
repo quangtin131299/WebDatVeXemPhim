@@ -2,6 +2,7 @@ const home = require("./home");
 const login = require("./login");
 const dk = require("./dangky");
 const ticker = require("./ticker");
+const cinema = require("./cinema")
 
 function route(app){
     app.use("/", home)
@@ -14,6 +15,8 @@ function route(app){
     app.use("/dangky", dk);
 
     app.use("/ticker", ticker)
+
+    app.use("/cinema",  cinema)
 
 }
 
