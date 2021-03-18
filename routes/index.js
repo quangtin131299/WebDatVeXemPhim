@@ -1,7 +1,7 @@
 const home = require("./home");
-const login = require("./login")
-const dk = require("./dangky")
-
+const login = require("./login");
+const dk = require("./dangky");
+const ticker = require("./ticker");
 
 function route(app){
     app.use("/", home)
@@ -12,6 +12,8 @@ function route(app){
     
     //Đăng ký
     app.use("/dangky", dk);
+
+    app.use("/ticker", ticker)
 
 }
 
