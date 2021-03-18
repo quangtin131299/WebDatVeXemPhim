@@ -39,6 +39,7 @@ $(document).ready(function () {
     // });
 
     $('.imgtrailer').each(function(index, el){
+
         $('#'+el.id).on('click',function(){
            $("#video").attr("src", "https://www.youtube.com/embed/" + this.id);
         })

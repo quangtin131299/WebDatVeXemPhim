@@ -45,13 +45,7 @@ include ../Utils/footer.pug
 script(src='javascripts/plugins.js')
 script(src='javascripts/app.js')
 script(src="javascripts/scriptHome/scriptindex.js") 
-script.
-  let list = JSON.stringify(#{listrap});
-  console.log(list);
-//-   $('.ABC').each(function(index, el){
-//-     $('#'+el.id).click(function(){
-//-        console.log(this.id);
-//-     })
-//-   })
+script(src="javascripts/scriptCinema/script.js",id='field-source', data-fields=JSON.stringify(listrap))
+  
 
 
