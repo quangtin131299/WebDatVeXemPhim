@@ -39,7 +39,6 @@ $(document).ready(function () {
     // });
 
     $('.imgtrailer').each(function(index, el){
-
         $('#'+el.id).on('click',function(){
            $("#video").attr("src", "https://www.youtube.com/embed/" + this.id);
         })
@@ -47,9 +46,11 @@ $(document).ready(function () {
 
     $(".btnXemChiTiet").each(function(index, el){
       $('#'+el.id).click(function(){
-        window.location.replace("/detailMovie/getdetails")
+      
+        window.location.replace(`/detailMovie/getdetails?id=${this.id}`)
       })
     })
+
     
 
 
