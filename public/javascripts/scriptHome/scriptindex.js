@@ -44,6 +44,13 @@ $(document).ready(function () {
         })
     })
 
+    $(".btnXemChiTiet").each(function(index, el){
+      $('#'+el.id).click(function(){
+        window.location.replace("/detailMovie/getdetails")
+      })
+    })
+    
+
 
     
     

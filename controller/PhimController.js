@@ -2,8 +2,8 @@ const phimModel = require('../db/PhimModel')
 
 class PhimController{
 
-    getChiTietPhim(){
-
+    getChiTietPhim(req, res){
+        res.render("Phim/chitietphim");
     }
 
 }

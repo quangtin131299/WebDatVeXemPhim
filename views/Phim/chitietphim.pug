@@ -1,0 +1,147 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+  include ../Utils/menu.pug
+  main.main-content
+    .container
+      .page
+        .breadcrumbs
+          a(href='index.html') Home
+          a(href='review.html') Movie Review
+          span The Croods
+        .content
+          .row
+            .col-md-6
+              figure.movie-poster(style='display: flex; justify-content: center;')
+                img(width='360' height='500' src='dummy/single-image.jpg' alt='#')
+            .col-md-6
+              h2.movie-title T&ecirc;n phim
+              ul.movie-meta
+                li
+                  strong &Dstrok;&aacute;nh gi&aacute;:
+                  .star-rating(title='Rated 4.00 out of 5')
+                    span(style='width:80%')
+                      strong.rating 4.00
+                      |  out of 5
+                li
+                  strong Th&#x1EDD;i gian chi&#x1EBF;uchi&#x1EBF;u:
+                  |  98 min
+                li
+                  strong Ng&agrave;y kh&#x1EDF;i chi&#x1EBF;u:
+                  |  22 March 2013 (USA)
+                li
+                  strong Th&#x1EC3; lo&#x1EA1;i:
+                  |  Animation/Adventure/Comedy
+              ul.starring
+                li
+                  .row
+                    .col-sm-6
+                      button.btn.btn-success(type='button' data-toggle='modal' data-target='#exampleModal' style='width: 150px;')
+                        | &Dstrok;&#x1EB7;t
+                        | v&eacute;
+                      #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+                        .modal-dialog.modal-xl
+                          .modal-content
+                            .modal-header
+                              h5#exampleModalLabel.modal-title
+                                | Ch&#x1ECD;n su&#x1EA5;t
+                                | chi&#x1EBF;u trong rap
+                              button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                span(aria-hidden='true') &times;
+                            .modal-body
+                              div
+                                .row
+                                  .col-sm-3
+                                    p(style='height: 100%; display: flex; align-items: center; color: red;')
+                                      | Ch&#x1ECD;n ngay &dstrok;&#x1EB7;t v&eacute;:
+                                  .col-sm-9
+                                    input.form-control(type='date' placeholder='Ngày đặt vé' aria-label='Username' aria-describedby='basic-addon1')
+                              hr
+                              div
+                                h1 T&ecirc;n r&#x1EA1;p 1
+                                div(style='display: flex; flex-direction: row; ')
+                                  .text-center(style='margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                    a(href='chonghe.html') Su&#x1EA5;t chi&#x1EBF;u 1
+                                  .text-center(style=' margin-left: 10px;display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 2
+                                  .text-center(style=' margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 3
+                              hr
+                              hr
+                              div
+                                h1 T&ecirc;n r&#x1EA1;p 2
+                                div(style='display: flex; flex-direction: row; ')
+                                  .text-center(style='margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 1
+                                  .text-center(style=' margin-left: 10px;display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                    a(href='#') Su&#x1EA5;t ch&#x1EBF;u 2
+                                  .text-center(style=' margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 3
+                              hr
+                              hr
+                              div
+                                h1 T&ecirc;n r&#x1EA1;p 3
+                                div(style='display: flex; flex-direction: row; ')
+                                  .text-center(style='margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 1
+                                  .text-center(style=' margin-left: 10px;display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 2
+                                  .text-center(style=' margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 3
+                              hr
+          // .row
+          div
+            h1 M&ocirc; t&#x1EA3; phim
+          .entry-content
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac pharetra libero.
+              | Integer in suscipit diam, sit amet eleifend nunc. Curabitur egestas nunc nulla, in
+              | aliquet risus efficitur quis. Vivamus facilisis est libero, vitae iaculis nulla cursus
+              | in. Suspendisse potenti. In et fringilla ipsum, quis varius quam. Morbi eleifend
+              | venenatis diam finibus vehicula. Suspendisse eu blandit metus. Sed feugiat pellentesque
+              | turpis, in lacinia ipsum. Vivamus nec luctus orci.
+            p
+              | Aenean vehicula eget risus sit amet posuere. Maecenas id risus maximus, malesuada leo
+              | eget, pellentesque arcu. Phasellus vitae leo rhoncus, consectetur mauris vitae, lacinia
+              | quam. Nunc turpis erat, accumsan eget justo quis, auctor ultricies magna. Mauris
+              | sodales, risus sit amet hendrerit tincidunt, erat ante facilisis sapien, sit amet
+              | maximus neque massa a felis. Nullam consectetur justo massa, vel commodo metus gravida
+              | in. Aliquam erat volutpat. Nullam a lorem sed lorem euismod gravida a eu velit. Lorem
+              | ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis ac ligula vel
+              | pharetra. Aenean vitae nulla sed dui volutpat euismod. Nam ex quam, consequat id rutrum
+              | sed, porttitor id lectus. Vestibulum venenatis consectetur justo ut sagittis. Duis
+              | dignissim tincidunt quam, nec pulvinar libero luctus nec. Morbi blandit nec lorem in
+              | ullamcorper.
+            p
+              | Vestibulum et odio massa. Integer at odio ipsum. Proin vitae tristique nibh. Aenean
+              | semper ante sit amet ante ultricies tincidunt. Curabitur cursus, urna non ultricies
+              | posuere, dolor lacus cursus lorem, a dapibus nibh ex eget sem. Aliquam semper sagittis
+              | sapien a fermentum. Nullam sed iaculis lacus, et imperdiet risus. Praesent quis turpis
+              | ac nunc sodales tincidunt. Aliquam at leo odio. Sed a tempor nisl, et mattis felis. Nam
+              | mauris nunc, commodo ac orci ut, auctor viverra mauris.
+            p
+              | Quisque nec justo vitae metus consectetur ultrices. Duis venenatis lorem massa, eu
+              | pulvinar quam faucibus sed. Nulla fringilla lorem sit amet sagittis mattis. Nunc in leo
+              | a odio mollis consectetur. Etiam ac nisl eget diam ullamcorper porta. Aliquam
+              | consectetur neque eget metus egestas sollicitudin. Curabitur ultrices urna et feugiat
+              | malesuada.
+            p
+              | Nulla facilisi. Fusce sed dapibus leo, eu lobortis ante. Duis luctus mauris in ante
+              | semper, ut feugiat nisi condimentum. Nullam a odio et justo suscipit tempus. Vestibulum
+              | placerat dapibus quam, a egestas turpis efficitur id. Integer suscipit placerat
+              | placerat. Phasellus in lorem quis leo egestas accumsan. Nam et euismod ligula. Duis nec
+              | erat aliquam, sollicitudin diam non, ornare leo. Pellentesque augue leo, faucibus in
+              | nunc nec, tincidunt ullamcorper tortor. Phasellus aliquam condimentum elit. Nulla
+              | facilisi. Donec magna libero, bibendum eu faucibus et, mattis at felis. Integer turpis
+              | nibh, blandit nec elit vel, euismod laoreet quam. Donec vel ante nisi. Nunc luctus a
+              | tellus non.
+          div
+            h1 Trailer phim
+            div
+              iframe(width='100%' height='400' src='https://www.youtube.com/embed/RqcQyB5q7sY' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+// .container
+include ../Utils/footer.pug
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(src="javascripts/scriptHome/scriptindex.js") 
+
