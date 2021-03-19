@@ -24,3 +24,4 @@ class DangKyController{
 }
 
 module.exports = new DangKyController();
+

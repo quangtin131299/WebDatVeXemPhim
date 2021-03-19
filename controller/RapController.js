@@ -1,11 +1,16 @@
 const rapModel = require('../db/RapModel')
 class RapController{
 
-    loadRap(){
+    loadRap(req, res){
+        rapModel.loadALLRap().then(function(result){
+            res.render("Cinema/cinema", {listrap: result});
+        }).catch(function(err){
 
+        })
+        
     }
 
-    loadChiTietRap(){
+    loadChiTietRap(req, res){
 
     }
 
