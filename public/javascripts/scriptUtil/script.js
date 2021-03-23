@@ -5,6 +5,7 @@ window.BeforeUnloadEvent = function () {
 $(window).ready(function () {
   let user = JSON.parse(window.localStorage.getItem("user"));
   if (user) {
+    $('#loadticker').attr('href', `/ticker/yourticker?iduser=${user.ID}`);
     $("#tk").attr("href", "");
     let arrayhoten = user.HoTen.split(" ");
     let sl = arrayhoten.length;
@@ -23,4 +24,7 @@ $(window).ready(function () {
         window.location.reload();
      })
   }
+
 });
+
+

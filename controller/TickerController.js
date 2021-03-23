@@ -3,7 +3,8 @@ const tickerModel = require('../db/TickerModel');
 
 class Ticker{
     getYourTicker(req, res){
-        tickerModel.getYourTicker().then(function(result){
+        let iduser = req.query.iduser;
+        tickerModel.getYourTicker(iduser).then(function(result){
             // console.log(result);
             res.render("Ticker/yourticker", {listTicker: result});
         }).catch(function(err){
