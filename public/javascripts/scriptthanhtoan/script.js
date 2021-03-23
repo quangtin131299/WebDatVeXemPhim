@@ -9,7 +9,8 @@ let row = ticker.tenghe.split("");
 $("#day").text(row[0]);
 
 let user = JSON.parse(window.localStorage.getItem("user"));
-$(".tenng").text(user.HoTen);
+console.log("ABC");
+$(".usertt").val(user.HoTen);
 
 $("#btnThanhToan").click(function () {
   ticker.idkhachhang = 1;
@@ -18,6 +19,7 @@ $("#btnThanhToan").click(function () {
       alert("Thanh toán thành công, vé của bạn đã được ghi nhận !");
       window.location.replace("/");
       window.localStorage.removeItem('ticker')
+      return;
   })
 });
 
