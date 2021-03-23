@@ -1,7 +1,6 @@
 $(document).ready(function () {
   if ($(".bbb_viewed_slider").length) {
     var viewedSlider = $(".bbb_viewed_slider");
-
     viewedSlider.owlCarousel({
       loop: true,
       margin: 280,
@@ -38,24 +37,30 @@ $(document).ready(function () {
     //   }
     // });
 
-    $('.imgtrailer').each(function(index, el){
-        $('#'+el.id).on('click',function(){
-           $("#video").attr("src", "https://www.youtube.com/embed/" + this.id);
-        })
-    })
+    $(".imgtrailer").each(function (index, el) {
+      $("#" + el.id).on("click", function () {
+        $("#video").attr("src", "https://www.youtube.com/embed/" + this.id);
+      });
+    });
 
-    $(".btnXemChiTiet").each(function(index, el){
-      $('#'+el.id).click(function(){
-      
-        window.location.replace(`/detailMovie/getdetails?id=${this.id}`)
-      })
-    })
+    $(".btnXemChiTiet").each(function (index, el) {
+      $("#" + el.id).click(function () {
+        console.log("ABC");
+        window.location.replace(`/detailMovie/getdetails?id=${this.id}`);
+      });
+    });
 
-    
-
-
-    
-    
-
+    let user;
+    let cookies = document.cookie.split(";");
+    let sl = cookies.length;
+    for (let i = 0; i < sl; i++) {
+      if (cookies[i].includes("user")) {
+        user = JSON.parse(decodeURIComponent(cookies[i].split("=")[1]));
+      }
+    }
+    if(user){ 
+      window.localStorage.setItem("user", JSON.stringify(user));
+    }
+   
   }
 });

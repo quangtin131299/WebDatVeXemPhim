@@ -1,5 +1,6 @@
 const loginModel = require("../db/LoginModel");
 
+
 class DangNhapController {
   index(req, res) {
     res.render("Login/login");
@@ -12,11 +13,19 @@ class DangNhapController {
     loginModel
       .login(username, password)
       .then(function (result) {
-        res.redirect("/home");
+        res.cookie('user', JSON.stringify(result));
+        res.redirect("/");
       })
       .catch(function (err) {
         res.render("Login/login", { message: "Đăng nhập thất bại" });
       });
+  }
+
+
+  logout(req ,res){
+    let user = req.cookies.user;
+    res.cookie('user', user, {maxAge: 0})
+    res.redirect("/");
   }
 }
 

@@ -6,11 +6,16 @@ class PhimController {
     phimModel
       .loadChiTietPhim(idphim)
       .then(function (result) {
-        console.log(result);
-        res.render("Phim/chitietphim", { phimchitiet: result });
+        let resultsc = phimModel.getSuatChieu(idphim, "2021-03-21");
+        resultsc.then(function (resultscallrap) {
+          res.render("Phim/chitietphim", {
+            phimchitiet: result,
+            listsc: resultscallrap,
+          });
+        });
       })
       .catch(function (err) {
-          console.log("ABC");
+        console.log("ABC");
       });
   }
 }

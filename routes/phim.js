@@ -8,4 +8,6 @@ route.use(express.static('public'));
 route.get("/getdetails", phimController.getChiTietPhim);
 
 
+
+
 module.exports = route;

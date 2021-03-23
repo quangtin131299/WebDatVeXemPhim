@@ -1,6 +1,6 @@
 header.site-header
   .container
-    a#branding(href='/home')
+    a#branding(href='/')
       img.logo(src='images/logo.png' alt='')
       .logo-copy
         h1.site-title Cine plus +
@@ -11,12 +11,11 @@ header.site-header
         i.fa.fa-bars
       ul.menu
         li.menu-item.current-menu-item
-          a(href='home')
+          a(href='/')
             img(src='images/home.png' width='24' height='24')
             | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Trang ch&#x1EE7;
-
         li.menu-item
-          a(href='about.html')
+          a(href='gioithieu/loadPage')
             img(src='images/speech.png' width='24' height='24')
             | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Gi&#x1EDB;i thi&#x1EC7;u
         li.menu-item(style="margin-right: 20px; margin-left:20px")
@@ -24,7 +23,6 @@ header.site-header
             a(href='/cinema/getCinema')
               img(src='images/cinema.png' alt='' srcset='' width='24' height='24')
               | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;R&#x1EA1;p chi&#x1EBF;u
-
         li.menu-item(style="margin-right: 20px; margin-left:19px;")
           .row
             a(href='/ticker/yourticker')
@@ -38,10 +36,11 @@ header.site-header
           a(href='contact.html')
             img(src='images/newspaper.png' width='24' height='24')
             | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Tin t&#x1EE9;c
-        li.menu-item
-          a(href='/login/getpage')
+        li.menu-item(id="login")
+          a(id="tk",href='/login/getpage')
             img(src='https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/icon_login25.png' width='24' height='24')
-            | Login 
+            
+        
       // .menu
       // .main-navigation
       .mobile-navigation

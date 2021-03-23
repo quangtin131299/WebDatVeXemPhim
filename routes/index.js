@@ -3,11 +3,16 @@ const login = require("./login");
 const dk = require("./dangky");
 const ticker = require("./ticker");
 const phim = require("./phim");
-const cinema = require("./cinema")
+const cinema = require("./cinema");
+const chonghe = require("./chonghe");
+const thanhtoan = require('./thanhtoan');
+const canhan = require("./canhan");
+const gioithieu = require("./gioithieu");
+
 
 function route(app){
     app.use("/", home)
-    app.use("/home", home)
+    // app.use("/home", home)
 
     //Login
     app.use("/login", login)
@@ -17,9 +22,17 @@ function route(app){
 
     app.use("/ticker", ticker);
 
-    app.use("/detailMovie", phim)
+    app.use("/detailMovie", phim);
 
-    app.use("/cinema",  cinema)
+    app.use("/cinema", cinema);
+
+    app.use("/chonghe", chonghe);
+
+    app.use("/thanhtoan", thanhtoan);
+
+    app.use("/user",canhan);
+    
+    app.use("/gioithieu", gioithieu);
 
 }
 

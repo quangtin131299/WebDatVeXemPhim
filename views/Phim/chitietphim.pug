@@ -55,40 +55,18 @@ include ../Utils/header.pug
                                     p(style='height: 100%; display: flex; align-items: center; color: red;')
                                       | Ch&#x1ECD;n ngay &dstrok;&#x1EB7;t v&eacute;:
                                   .col-sm-9
-                                    input.form-control(type='date' placeholder='Ngày đặt vé' aria-label='Username' aria-describedby='basic-addon1')
+                                    input.form-control(id="txtngaydat",type='date' placeholder='Ngày đặt vé' aria-label='Username' aria-describedby='basic-addon1')
                               hr
-                              div
-                                h1 T&ecirc;n r&#x1EA1;p 1
-                                div(style='display: flex; flex-direction: row; ')
-                                  .text-center(style='margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
-                                    a(href='chonghe.html') Su&#x1EA5;t chi&#x1EBF;u 1
-                                  .text-center(style=' margin-left: 10px;display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
-                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 2
-                                  .text-center(style=' margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
-                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 3
-                              hr
-                              hr
-                              div
-                                h1 T&ecirc;n r&#x1EA1;p 2
-                                div(style='display: flex; flex-direction: row; ')
-                                  .text-center(style='margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
-                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 1
-                                  .text-center(style=' margin-left: 10px;display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
-                                    a(href='#') Su&#x1EA5;t ch&#x1EBF;u 2
-                                  .text-center(style=' margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
-                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 3
-                              hr
-                              hr
-                              div
-                                h1 T&ecirc;n r&#x1EA1;p 3
-                                div(style='display: flex; flex-direction: row; ')
-                                  .text-center(style='margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
-                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 1
-                                  .text-center(style=' margin-left: 10px;display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
-                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 2
-                                  .text-center(style=' margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
-                                    a(href='#') Su&#x1EA5;t chi&#x1EBF;u 3
-                              hr
+                              each scitem in listsc
+                                if scitem.Gio.length != 0
+                                  div
+                                  h1= scitem.TenRap
+                                  div(style='display: flex; flex-direction: row; ')
+                                    each itemgio in scitem.Gio
+                                      .text-center(style='margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                        a(class="thoigian",id=itemgio.ID,href='/chonghe/index')= itemgio.Gio
+                                  hr
+                                  hr
           // .row
           div
             h1 M&ocirc; t&#x1EA3; phim
@@ -104,4 +82,6 @@ include ../Utils/footer.pug
 script(src='javascripts/plugins.js')
 script(src='javascripts/app.js')
 script(src="javascripts/scriptHome/scriptindex.js") 
+script(src="javascripts/chitietphim/script.js") 
+
 

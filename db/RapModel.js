@@ -8,19 +8,11 @@ class RapModel{
             conn.query(queryrap, function(err, result){
                 if(err){
                     reject(err);
-                }else{
-                    console.log(result);
+                }else{  
                     resolve(result);
                 }
             })
         })
-
-        
-
-    }
-
-    loadChiTietRap(){
-        
     }
 }
 

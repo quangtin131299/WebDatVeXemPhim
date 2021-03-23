@@ -8,12 +8,11 @@ class LoginModel {
       password = md5(password);
       let query = `select * from khachhang where khachhang.Account = ? and khachhang.Password = ?`;
       conn.query(query, [username, password], function (err, result) {
-        if (err) {
-           
+        if (err) {     
             reject(false)
         } else {
             if(result.length != 0){
-                resolve(true)
+                resolve(result[0])
             }else{
                 reject(false)
             }

@@ -1,3 +1,4 @@
+const rapModel = require("./RapModel");
 const conn = require("./connect");
 
 class PhimModel {
@@ -39,6 +40,43 @@ class PhimModel {
           }
 
           resolve(mangkq[0]);
+        }
+      });
+    });
+  }
+
+  async getSuatChieu(idphim, ngayhientai) {
+    let rapresult = await rapModel.loadALLRap();
+    let sl = rapresult.length;
+    let arrayresult = [];
+    // tên rạp đã duyệt
+    let tenraptemp = "";
+    for (let i = 0; i < sl; i++) {
+      if (rapresult[i].TenRap !== tenraptemp) {
+        let temp = await this.getSCforRap(
+          rapresult[i].ID,
+          idphim,
+          ngayhientai
+        );
+        if (temp) {
+          rapresult[i].Gio = temp;
+          arrayresult.push(rapresult[i]);
+        }
+      }
+    }
+    return arrayresult;
+  }
+
+  getSCforRap(idrap, idphim, ngayhientai) {
+    return new Promise(function (resolve, reject) {
+      let sqlquery = `SELECT phim_phong_xuat.Ngay, suatchieu.ID, suatchieu.Gio
+      from phim_phong_xuat JOIN suatchieu ON phim_phong_xuat.ID_XuatChieu = suatchieu.ID JOIN lichchieu on lichchieu.ID = suatchieu.ID_LichChieu JOIN rapphim on rapphim.ID = lichchieu.ID_Rap JOIN phim ON phim_phong_xuat.ID_Phim = phim.ID
+      WHERE rapphim.ID = ${idrap} AND phim.ID = ${idphim} AND phim_phong_xuat.Ngay = '${ngayhientai}'`;
+      conn.query(sqlquery, function (err, resultsc) {
+        if (err) {
+          console.log(err);
+        } else {
+          resolve(resultsc);
         }
       });
     });
