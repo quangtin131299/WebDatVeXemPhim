@@ -10,11 +10,11 @@ $("#day").text(row[0]);
 
 let user = JSON.parse(window.localStorage.getItem("user"));
 $(".usertt").val(user.HoTen);
-$(".tenng").text(user.HoTen)
+$(".tenng").text(user.HoTen);
 
 
 $("#btnThanhToan").click(function () {
-  ticker.idkhachhang = 1;
+  ticker.idkhachhang = user.ID;
   window.localStorage.setItem("ticker", JSON.stringify(ticker));
   $.post("/thanhtoan/xulythanhtoan", {vedat: ticker},function(result){
       alert("Thanh toán thành công, vé của bạn đã được ghi nhận !");
