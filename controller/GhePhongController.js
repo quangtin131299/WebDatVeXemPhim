@@ -2,8 +2,11 @@ const ghephongModel = require("../db/GhePhongModel");
 
 class GhePhongController {
   loadPage(req, res) {
+    let idsuat = req.query.idsuat;
+    let idrap = req.query.idrap;
+    let idphim = req.query.idphim;
     ghephongModel
-      .loadPhong(1, 1, 82, "2021-03-21")
+      .loadPhong(idrap,idphim, idsuat, "2021-03-21")
       .then(function (resultphong) {
         ghephongModel
           .loadAllGhe(resultphong.ID)

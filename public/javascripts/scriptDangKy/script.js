@@ -1,6 +1,5 @@
-let isfail = false;
 $("#btnsubmit").click(function () {
-  alert("ABC")
+  let isfail = false;
   let hoten = $("input[name=txthoten]").val();
   let tk = $("input[name=txttk]").val();
   let mk = $("input[name=txtpass]").val();
@@ -81,9 +80,10 @@ $("#btnsubmit").click(function () {
     isfail = true;
   }
 
-
   if(isfail){
     return false;
+  }else{
+    return true;
   }
 
 });

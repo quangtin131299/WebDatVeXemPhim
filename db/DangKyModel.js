@@ -16,6 +16,8 @@ class DangKyModel {
           } else {
             if (result) {
               resolve(true);
+            }else{
+              reject(false);
             }
           }
         }

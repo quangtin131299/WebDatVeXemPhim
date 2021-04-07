@@ -9,8 +9,9 @@ let row = ticker.tenghe.split("");
 $("#day").text(row[0]);
 
 let user = JSON.parse(window.localStorage.getItem("user"));
-console.log("ABC");
 $(".usertt").val(user.HoTen);
+$(".tenng").text(user.HoTen)
+
 
 $("#btnThanhToan").click(function () {
   ticker.idkhachhang = 1;

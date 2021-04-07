@@ -15,7 +15,7 @@ class PhimController {
         });
       })
       .catch(function (err) {
-        console.log("ABC");
+        res.render("Phim/chitietphim");
       });
   }
 }

@@ -2,12 +2,12 @@ const phimModel = require("../db/PhimModel")
 class HomeController{
 
     index(req, res){
-        let listPhimDC = [];
+        let listPhim = [];
         phimModel.loadPhimDangChieu().then((result) => {
-            listPhimDC = result; 
-            res.render("Home/index", {listPhimDC: listPhimDC})
+            listPhim = result; 
+            res.render("Home/index", {listPhimDC: listPhim})
         }).catch((err) => {
-            console.log(err);
+            res.render("Home/index");
         });        
     }
 

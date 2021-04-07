@@ -1,6 +1,7 @@
 const rapModel = require("./RapModel");
 const conn = require("./connect");
 
+
 class PhimModel {
   loadPhimDangChieu() {
     return new Promise(function (resolve, reject) {
@@ -45,6 +46,15 @@ class PhimModel {
     });
   }
 
+  /**
+   * 
+   * Lấy suất chiếu toàn rạp
+   * 
+   * @param  idphim 
+   * @param  ngayhientai 
+   * @returns 
+   */
+
   async getSuatChieu(idphim, ngayhientai) {
     let rapresult = await rapModel.loadALLRap();
     let sl = rapresult.length;
@@ -67,6 +77,15 @@ class PhimModel {
     return arrayresult;
   }
 
+  /** 
+   * Lấy suất chiếu của một rạp
+   * 
+   * @param idrap
+   * @param idphim
+   * @param ngayhientai
+   * @returns {void}
+   * 
+   */
   getSCforRap(idrap, idphim, ngayhientai) {
     return new Promise(function (resolve, reject) {
       let sqlquery = `SELECT phim_phong_xuat.Ngay, suatchieu.ID, suatchieu.Gio

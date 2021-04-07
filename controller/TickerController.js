@@ -9,6 +9,7 @@ class Ticker{
             res.render("Ticker/yourticker", {listTicker: result});
         }).catch(function(err){
             console.log(err);
+            res.render("Ticker/yourticker")
         })
         
     }

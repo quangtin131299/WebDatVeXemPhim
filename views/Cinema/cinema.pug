@@ -44,9 +44,12 @@ include ../Utils/header.pug
 include ../Utils/footer.pug
 script(src='javascripts/plugins.js')
 script(src='javascripts/app.js')
-script(src="javascripts/scriptHome/scriptindex.js") 
+script(src="javascripts/scriptHome/scriptindex.js")
 script(src="javascripts/scriptCinema/script.js",id='field-source', data-fields=JSON.stringify(listrap))
-script(src="javascripts/scriptUtil/script.js") 
+script(async='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCfuJ_4wQX3NqAQnZB9Bhem2zporH0RPLM&callback=initMap')
+script(src="javascripts/scriptUtil/script.js")
+
+    
   
 
 
