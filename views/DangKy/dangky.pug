@@ -95,7 +95,14 @@ script(src="javascripts/scriptUtil/script.js")
 script.  
     let msg = "#{message}";
     if(msg){
-        alert(msg)
+        if(msg==="Đăng ký thành công"){
+            alert(msg);
+            window.location.replace("/login/getpage");
+        }
+        else {
+
+            alert(msg)
+        }
     }
 
 

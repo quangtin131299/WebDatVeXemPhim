@@ -15,9 +15,16 @@ class DangKyController{
         let sdt = req.body.txtsdt;
 
         dangkyModel.dangky(hoten, tk,mk,email,ngaysinh,sdt).then(function(result){
-           res.redirect("/login/getpage");
+            res.render("DangKy/dangky",
+            {
+                message: 'Đăng ký thành công',
+                userNew:result,
+                
+             });
+            // res.redirect("/login/getpage");
         }).catch(function(err){
-           res.render("DangKy/dangky",{message: "Đăng ký thất bại"});
+            console.log(err);
+           res.render("DangKy/dangky",{message: err});
         });    
     }
 
