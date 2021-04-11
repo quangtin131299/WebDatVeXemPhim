@@ -1,5 +1,6 @@
 class GioiThieuController{
     loadPage(req, res){
+        
         res.render("GioiThieu/gioithieu");
     }
 }
