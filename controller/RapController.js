@@ -9,11 +9,6 @@ class RapController{
         })
         
     }
-
-    loadChiTietRap(req, res){
-
-    }
-
 }
 
 module.exports = new RapController();
