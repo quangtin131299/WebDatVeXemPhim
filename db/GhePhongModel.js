@@ -12,7 +12,6 @@ class GhePhongModel {
           resolve(result);
         }
       });
-      
     });
   }
 
